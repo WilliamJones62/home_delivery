@@ -1,0 +1,2 @@
+module MiltonHelper
+end

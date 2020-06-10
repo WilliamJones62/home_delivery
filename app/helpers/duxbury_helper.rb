@@ -1,0 +1,2 @@
+module DuxburyHelper
+end

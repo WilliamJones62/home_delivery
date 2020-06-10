@@ -1,0 +1,2 @@
+module BedfordhillsHelper
+end

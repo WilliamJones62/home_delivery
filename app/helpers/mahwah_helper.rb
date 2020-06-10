@@ -1,0 +1,2 @@
+module MahwahHelper
+end

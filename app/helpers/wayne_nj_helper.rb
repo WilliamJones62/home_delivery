@@ -1,0 +1,2 @@
+module WayneNjHelper
+end

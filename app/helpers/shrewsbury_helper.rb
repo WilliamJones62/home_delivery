@@ -1,0 +1,2 @@
+module ShrewsburyHelper
+end

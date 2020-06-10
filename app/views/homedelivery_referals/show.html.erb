@@ -1,0 +1,44 @@
+<h1>Showing Home Delivery Referral</h1>
+<p id="notice"><%= notice %></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Contact Name</th>
+      <th>Contact Method 1</th>
+      <th>Contact Info 1</th>
+      <th>Contact Method 2</th>
+      <th>Contact Info 2</th>
+      <th>Contact Method 3</th>
+      <th>Contact Info 3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> <%= @homedelivery_referal.contact_name  %> </td>
+      <td> <%= @homedelivery_referal.contact_method_1  %> </td>
+      <td> <%= @homedelivery_referal.contact_info_1  %> </td>
+      <td> <%= @homedelivery_referal.contact_method_2  %> </td>
+      <td> <%= @homedelivery_referal.contact_info_2  %> </td>
+      <td> <%= @homedelivery_referal.contact_method_3  %> </td>
+      <td> <%= @homedelivery_referal.contact_info_3  %> </td>
+    </tr>
+  </tbody>
+</table>
+<table>
+  <thead>
+    <tr>
+      <th>Referred By</th>
+      <th>Relationship</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> <%= @homedelivery_referal.referred_by  %> </td>
+      <td> <%= @homedelivery_referal.relationship  %> </td>
+    </tr>
+  </tbody>
+</table>
+
+<%= link_to 'Edit', edit_homedelivery_referal_path(@homedelivery_referal), class: "btn btn-primary" %>
+<%= link_to 'Back', homedelivery_referals_path, class: "btn btn-primary" %>

@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Home Delivery Referrals</h1>
+
+<table id="index_dt"  class="stripe" class="mytable" class="display" cellspacing="0" >
+  <thead>
+    <tr>
+      <th>Contact name</th>
+      <th>Referred by</th>
+      <th>Relationship</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @homedelivery_referals.each do |homedelivery_referal| %>
+      <tr>
+        <td><%= homedelivery_referal.contact_name %></td>
+        <td><%= homedelivery_referal.referred_by %></td>
+        <td><%= homedelivery_referal.relationship %></td>
+        <td><%= link_to 'Edit', edit_homedelivery_referal_path(homedelivery_referal), class: "btn btn-primary" %></td>
+        <td><%= link_to 'Delete', homedelivery_referal, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Home Delivery Referral', new_homedelivery_referal_path, class: "btn btn-primary" %>

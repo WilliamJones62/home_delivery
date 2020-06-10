@@ -1,0 +1,82 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "bootstrap";
+
+#report_options th, td {
+  padding: 15px;
+}
+
+#navbar span {
+  float: left;
+  margin-right: 1em;
+}
+
+body {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 20px;
+  margin: 1em;
+}
+
+.upboldcenterred {
+  text-transform: uppercase;
+  color: #C61D1D;
+  text-align:center;
+  font-weight: bold;
+  font-size: 2.5vw;
+}
+
+h3 {
+  text-align:center;
+  font-weight: bold;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.max_width {
+  margin: auto;
+  max-width: 1000px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.center_bold {
+  color: #C61D1D;
+  text-align:center;
+  font-weight: bold;
+  font-size: 1.5vw;
+}
+
+.center_normal {
+  text-align:center;
+  font-weight: bold;
+  font-size: 1.5vw;
+}
+
+.italic {
+  font-style: italic;
+}
+
+p {text-align:center;}
+
+.responsive {
+  width: 100%;
+  height: auto;
+}

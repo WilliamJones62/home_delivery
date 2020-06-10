@@ -1,0 +1,2 @@
+module KatonahHelper
+end

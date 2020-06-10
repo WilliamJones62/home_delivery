@@ -1,0 +1,2 @@
+module ArlingtonHelper
+end

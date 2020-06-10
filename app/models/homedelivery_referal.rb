@@ -1,0 +1,2 @@
+class HomedeliveryReferal < ApplicationRecord
+end

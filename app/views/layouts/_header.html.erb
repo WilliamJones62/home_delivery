@@ -1,0 +1,14 @@
+<% content_for :head do %>
+  <%= tag :meta, property: "og:type", content: "website" %>
+  <%= tag :meta, property: "og:image", content: "http://homedelivery.dartagnan.com/assets/HomeDelivery_LandingPage_1.jpg" %>
+  <%= tag :meta, property: "og:image:type", content: "image/jpeg" %>
+  <%= tag :meta, property: "og:image:alt", content: "D'Artagnan Home Delivery" %>
+  <%= tag :meta, property: "og:title", content: "D'Artagnan Home Delivery in "+@location %>
+  <%= tag :meta, property: "og:url", content: "http://homedelivery.dartagnan.com/"+@promo.downcase %>
+  <%= tag :meta, property: "og:description", content: "Small-farm meats, poultry and more. Top chef preferred for 35 years" %>
+<% end %>
+
+<div class=max_width>
+<img src="/assets/HomeDelivery_LandingPage_1.jpg" alt="Home Delivery Header" class="responsive">
+
+<div class='upboldcenterred'>FREE DELIVERIES IN <%=@location%></div>

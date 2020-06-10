@@ -1,0 +1,32 @@
+<table id="normal_dt" class="cell-border" class="stripe" class="mytable" class="display" cellspacing="0" >
+  <thead>
+    <tr>
+      <th>Region</th>
+      <th>Route</th>
+      <th>Day</th>
+      <th>Next Delivery</th>
+      <th># Next Delivery</th>
+      <th>Total Open</th>
+      <th># Total Open</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @report_lines.each do |r| %>
+    <tr>
+      <td><%= r[:region] %></td>
+      <% if r[:region] == '** TOTALS **' %>
+        <td></td>
+        <td></td>
+      <% else %>
+        <td><%= r[:route] %></td>
+        <td><%= display_date(r[:ship_date]) %></td>
+      <% end %>
+      <td><%= number_to_currency(r[:preshipped_sales]) %></td>
+      <td><%= r[:preshipped_count] %></td>
+      <td><%= number_to_currency(r[:preshipped_total_sales]) %></td>
+      <td><%= r[:preshipped_total_count] %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

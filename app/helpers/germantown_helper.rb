@@ -1,0 +1,2 @@
+module GermantownHelper
+end

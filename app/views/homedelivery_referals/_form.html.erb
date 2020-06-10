@@ -1,0 +1,72 @@
+<%= form_with(model: homedelivery_referal, local: true) do |form| %>
+  <% if homedelivery_referal.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(homedelivery_referal.errors.count, "error") %> prohibited this homedelivery_referal from being saved:</h2>
+
+      <ul>
+      <% homedelivery_referal.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th> <%= form.label :town %> </th>
+        <th> <%= form.label :referred_by %> </th>
+        <th> <%= form.label :relationship %> </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td> <%= form.select :town, @town, {:include_blank => true}, {:value => params[:town], id: :homedelivery_referal_town} %> </td>
+        <td> <%= form.text_field :referred_by, id: :homedelivery_referal_referred_by %> </td>
+        <td> <%= form.text_field :relationship, id: :homedelivery_referal_relationship %> </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th> <%= form.label :contact_name %> </th>
+        <th> <%= form.label :contact_method_1 %> </th>
+        <th> <%= form.label :contact_info_1 %> </th>
+        <th> <%= form.label :contact_method_2 %> </th>
+        <th> <%= form.label :contact_info_2 %> </th>
+        <th> <%= form.label :contact_method_3 %> </th>
+        <th> <%= form.label :contact_info_3 %> </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td> <%= form.text_field :contact_name, id: :homedelivery_referal_contact_name %> </td>
+        <td> <%= form.select :contact_method_1, @method, {:include_blank => true}, {:value => params[:contact_method_1], id: :homedelivery_referal_contact_method_1} %> </td>
+        <td> <%= form.text_field :contact_info_1, id: :homedelivery_referal_contact_info_1 %> </td>
+        <td> <%= form.select :contact_method_2, @method, {:include_blank => true}, {:value => params[:contact_method_2], id: :homedelivery_referal_contact_method_2} %> </td>
+        <td> <%= form.text_field :contact_info_2, id: :homedelivery_referal_contact_info_2 %> </td>
+        <td> <%= form.select :contact_method_3, @method, {:include_blank => true}, {:value => params[:contact_method_3], id: :homedelivery_referal_contact_method_3} %> </td>
+        <td> <%= form.text_field :contact_info_3, id: :homedelivery_referal_contact_info_3 %> </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th> <%= form.label :notes %> </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td> <%= form.text_area :notes, id: :homedelivery_referal_notes %> </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="actions">
+    <%= form.submit  "Submit"%>
+  </div>
+<% end %>

@@ -1,0 +1,2 @@
+module BeverlyHelper
+end

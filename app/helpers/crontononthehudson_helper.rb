@@ -1,0 +1,2 @@
+module CrontononthehudsonHelper
+end

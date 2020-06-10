@@ -1,0 +1,31 @@
+<table id="normal_dt" class="cell-border" class="stripe" class="mytable" class="display" cellspacing="0" >
+  <thead>
+    <tr>
+      <th>Region</th>
+      <th>Day</th>
+      <th>Town</th>
+      <th>Open Sales</th>
+      <th># Open Sales</th>
+      <th>Shipped</th>
+      <th>Total Sales</th>
+      <th>Average Sale</th>
+      <th>Total # Orders</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @report_lines.each do |r| %>
+    <tr>
+      <td><%= r[:region] %></td>
+      <td><%= r[:ship_date] %></td>
+      <td><%= r[:town] %></td>
+      <td><%= number_to_currency(r[:preshipped_sales]) %></td>
+      <td><%= r[:preshipped_count] %></td>
+      <td><%= number_to_currency(r[:shipped_sales]) %></td>
+      <td><%= number_to_currency(r[:preshipped_sales ]+ r[:shipped_sales]) %></td>
+      <td><%= number_to_currency(r[:average_sale]) %></td>
+      <td><%= r[:sales_count] %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

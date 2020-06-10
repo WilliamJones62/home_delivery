@@ -1,0 +1,2 @@
+module MarlboroughHelper
+end
