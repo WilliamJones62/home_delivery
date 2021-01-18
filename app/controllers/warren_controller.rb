@@ -1,7 +1,7 @@
 class WarrenController < ApplicationController
   def main
     @partners_path = warren_partners_path
-    screen_vars = ScreenVar.new('FRIDAY', 'WARREN')
+    screen_vars = ScreenVar.new('SATURDAY', 'WARREN')
     @message = screen_vars.message
     @delivery_day = screen_vars.delivery_day
     @cutoff_day = screen_vars.cutoff_day
